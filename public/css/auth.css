@@ -1,0 +1,93 @@
+.form_box {
+    width: 500px;
+    height: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 5 !important;
+    padding-left: 100px;
+}
+
+.form_box i {
+    font-size: 100px;
+    margin-bottom: 20px;
+}
+
+.form_box .campo {
+    display: block;
+    width: 100%;
+    height: 40px;
+    font-size: 18px;
+    border: 2px solid #1F1926;
+    border-radius: 50px;
+    padding-left: 15px;
+    margin-bottom: 17px;
+}
+
+.form_box .btn_enviar {
+    width: 100%;
+    font-size: 21px;
+    background: #6923FF;
+    border-radius: 50px;
+    padding-left: 15px;
+    border: none;
+    color: #fff;
+    height: 40px;
+    margin-bottom: 5px;
+}
+
+.form_box p {
+    font-size: 15px;
+}
+
+.form_box p a {
+    text-decoration: none;
+    color: #1F1926;
+}
+
+.form_box p a:hover {
+    color: #6923FF;
+}
+
+.img_login {
+    position: absolute;
+    width: 700px;
+    bottom: 0;
+    left: -160px;
+}
+
+.img_registro {
+    position: absolute;
+    width: 600px;
+    bottom: 0;
+    left: -20px;
+}
+
+@media screen and (max-width: 1300px) {
+    .img_login {
+        width: 500px;
+        left: -130px;
+    }
+
+    .img_registro {
+        width: 470px;
+        left: -20px;
+    }
+}
+
+@media screen and (max-width: 995px) {
+    .img_login {
+        display: none;
+    }
+
+    .img_registro {
+        display: none;
+    }
+
+    .form_box {
+        width: 400px;
+        padding-left: 0;
+    }
+}

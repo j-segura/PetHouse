@@ -1,0 +1,54 @@
+.header_adopcion {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    height: 100%;
+    align-items: center;
+}
+
+.header_data {
+    padding: 70px;
+}
+
+.header_data h1 {
+    color: #382B47;
+    font-size: 50px;
+}
+
+.header_data p {
+    color: #1f1926ce;
+    margin-bottom: 50px;
+}
+
+.home_image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+}
+
+.home_blob {
+    width: 650px;
+    height: auto;
+    position: absolute;
+    overflow: hidden;
+}
+
+.home_blob_img {
+    position: absolute;
+    top: -120px;
+    right: 70px;
+    width: 480px;
+    height: auto;
+}
+
+.ver_candidatos {
+    text-decoration: none;
+    color: #fff;
+    background-color: #8A3FFC;
+    padding: 10px 20px;
+    border-radius: 50px;
+    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.3);
+}

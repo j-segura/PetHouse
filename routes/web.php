@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::view('/', 'adoptar')->name('adoptar');
 Route::view('/nosotros', 'nosotros')->name('nosotros');
 Route::view('/contactanos', 'contactanos')->name('contactanos');
+Route::view('/perros', 'perros')->name('perros');
 
 Route::view('/entrar', 'auth.entrar')->name('entrar');
 Route::view('/registro', 'auth.registro')->name('registro');

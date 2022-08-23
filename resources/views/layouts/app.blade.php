@@ -45,6 +45,35 @@
         <main>
             {{ $slot }}
         </main>
+
+        <footer>
+            <div class="social">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+
+            <ul class="contact">
+                <li class="phone">
+                    <i class="fa-solid fa-phone"></i>
+                    311 677 1798
+                </li>
+                <li>pethouse@gmail.com</li>    
+            </ul>
+
+            <ul class="list">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Servicion</a></li>
+                <li><a href="#">Nosotros</a></li>
+                <li><a href="#">Terminos y condiciones</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+
+            <div class="empresa">
+                PetHouse @ 2022
+            </div>
+        </footer>
     </div>
 
     @stack('modals')
@@ -53,3 +82,82 @@
 </body>
 
 </html>
+
+<style>
+    footer {
+        padding: 40px 0;
+        background-color: rgb(18, 18, 18);
+    }
+
+    footer .social {
+        text-align: center;
+        padding-bottom: 1rem;
+        color: rgb(155, 155, 155);
+    }
+
+    footer .social a {
+        margin: 0 4px;
+        font-size: 1.3rem;
+    }
+
+    footer .social a:hover {
+        color: inherit;
+        opacity: 0.8;
+    }
+
+    footer .contact {
+        margin-top: 0;
+        padding: 0;
+        margin-bottom: 15px;
+        text-align: center;
+        color: rgb(183, 183, 183);
+        opacity: 0.8;
+        font-weight: 300;
+        font-size: 0.9rem;
+    }
+
+    .phone i{
+        font-size: 13px;
+        margin-right: 5px;
+    }
+
+    .phone {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    footer .list {
+        margin-top: 0;
+        padding: 0;
+        list-style: none;
+        font-size: 1rem;
+        margin-bottom: 0;
+        text-align: center;
+    }
+
+    footer .list a {
+        color: rgb(183, 183, 183);
+        text-decoration: none;
+        opacity: 0.8;
+        font-weight: 300;
+        font-size: 0.9rem;
+    }
+
+    footer .list a:hover {
+        opacity: 1;
+    }
+
+    footer .list li,
+    footer .contact li {
+        display: inline-block;
+        padding: 0 15px
+    }
+
+    .empresa {
+        margin-top: 15px;
+        text-align: center;
+        font-size: 0.8rem;
+        color: rgb(88, 88, 88);
+    }
+</style>

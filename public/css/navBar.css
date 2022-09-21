@@ -1,5 +1,8 @@
-.navbar {
-    background: #fff;
+.navBar {
+    background: #222 !important;
+    position: fixed;
+    z-index: 10 !important;
+    width: 100%;
 }
 
 .icon h1 {
@@ -7,6 +10,7 @@
     align-items: center;    
     margin-left: 10px;
     font-size: 25px;
+    color: #fff;
 }
 
 .icon i {
@@ -31,4 +35,28 @@
 .icon {
     width: 25px;
     height: 25px;
+}
+
+.link {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.registro:hover{
+    color: white;
+}
+
+.link:hover {
+    color: rgb(97, 97, 210);
+}
+
+.registro {
+    color: white;
+    margin-left: 3rem;
+}
+
+.btn_entrar {
+    margin-left: 5px !important;
 }

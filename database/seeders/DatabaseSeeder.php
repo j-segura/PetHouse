@@ -2,6 +2,8 @@
 
 namespace Database\Seeders;
 
+use App\Models\Animal;
+use App\Models\Animale;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -20,5 +22,12 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+
+
+        $this->call(RazaSeeder::class);
+        $this->call(GeneroSeeder::class);
+        $this->call(CategoriaSeeder::class); 
+        $this->call(TamañoSeeder::class);
+        Animal::factory(50)->create();
     }
 }

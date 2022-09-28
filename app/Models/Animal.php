@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Animale extends Model
+class Animal extends Model
 {
     use HasFactory;
 
@@ -21,5 +21,9 @@ class Animale extends Model
 
     public function categoria(){
         return $this->belongsTo('App\Models\Categoria');
+    }
+
+    public function tamaño(){
+        return $this->belongsTo('App\Models\Tamaño');
     }
 }

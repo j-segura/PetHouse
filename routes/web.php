@@ -1,24 +1,19 @@
 <?php
 
+use App\Http\Controllers\AnimalController;
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
 
-Route::view('/', 'adoptar')->name('adoptar');
+Route::get('/', [AnimalController::class, 'index'])->name('animales.index');
+Route::get('animal/{animal}', [AnimalController::class, 'show'])->name('animales.show');
+Route::get('categoria/{categoria}', [AnimalController::class, 'categoria'])->name('animales.categoria');
+Route::get('raza/{raza}', [AnimalController::class, 'raza'])->name('animales.raza');
+Route::get('genero/{genero}', [AnimalController::class, 'genero'])->name('animales.genero');
+Route::get('tamaño/{tamaño}', [AnimalController::class, 'tamaño'])->name('animales.tamaño');
+
+
 Route::view('/nosotros', 'nosotros')->name('nosotros');
 Route::view('/contactanos', 'contactanos')->name('contactanos');
-
-Route::view('/entrar', 'auth.entrar')->name('entrar');
-Route::view('/registro', 'auth.registro')->name('registro');
 
 Route::middleware([
     'auth:sanctum',

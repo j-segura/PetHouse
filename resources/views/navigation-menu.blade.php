@@ -2,8 +2,8 @@
 $nav_links = [
     [
         'name' => 'Inicio',
-        'route' => route('adoptar'),
-        'active' => request()->routeIs('adoptar'),
+        'route' => route('animales.index'),
+        'active' => request()->routeIs('animales.index'),
     ],
     [
         'name' => 'Nosotros',
@@ -25,7 +25,7 @@ $nav_links = [
 
             <!-- Logo -->
             <div class="shrink-0 flex items-center">
-                <a href="{{ route('adoptar') }}" class="flex icon">
+                <a href="{{ route('animales.index') }}" class="flex icon">
                     <i class="fa-solid fa-paw logo"></i>
                     <h1>PetHouse</h1>
                 </a>

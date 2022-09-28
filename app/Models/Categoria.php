@@ -12,6 +12,6 @@ class Categoria extends Model
     //relacion uno a muchos
 
     public function animals(){
-        return $this->hasMany('App\Models\Animale');
+        return $this->hasMany('App\Models\Animal');
     }
 }

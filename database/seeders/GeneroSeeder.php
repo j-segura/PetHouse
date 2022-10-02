@@ -17,10 +17,12 @@ class GeneroSeeder extends Seeder
     {
         $genero = new Genero();
         $genero->name = 'Hembra';
+        $genero->slug = 'hembra';
         $genero->save();
 
         $genero = new Genero();
         $genero->name = 'Macho';
+        $genero->slug = 'macho';
         $genero->save();
     }
 }

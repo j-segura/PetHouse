@@ -10,6 +10,12 @@ class Genero extends Model
     use HasFactory;
 
     //relacion uno a muchos
+    protected $guarded = [];
+
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
 
     public function animals() {
         return $this->hasMany('App\Models\Animal');

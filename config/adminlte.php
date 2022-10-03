@@ -326,10 +326,12 @@ return [
             'active' => ['admin/generos*'],
         ],
         [
-            'text' => 'change_password',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-lock',
+            'text' => 'Razas',
+            'route'  => 'admin.razas.index',
+            'icon' => 'fab fa-fw fa-buffer',
+            'active' => ['admin/razas*'],
         ],
+        
         [
             'text'    => 'multilevel',
             'icon'    => 'fas fa-fw fa-share',

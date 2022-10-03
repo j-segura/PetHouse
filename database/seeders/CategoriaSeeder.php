@@ -17,11 +17,13 @@ class CategoriaSeeder extends Seeder
     {
         $categoria = new Categoria();
         $categoria->name = 'Perros';
+        $categoria->slug = 'perros';
         $categoria->banner = 'perros.jpg';
         $categoria->save();
 
         $categoria = new Categoria();
         $categoria->name = 'Gatos';
+        $categoria->slug = 'gatos';
         $categoria->banner = 'gatos.webp';
         $categoria->save();
 

@@ -320,6 +320,12 @@ return [
         ],
         ['header' => 'ADMINISTRADOR'],
         [
+            'text' => 'Categorias',
+            'route'  => 'admin.categorias.index',
+            'icon' => 'fab fa-fw fa-buffer',
+            'active' => ['admin/categorias*'],
+        ],
+        [
             'text' => 'Generos',
             'route'  => 'admin.generos.index',
             'icon' => 'fab fa-fw fa-buffer',

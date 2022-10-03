@@ -331,6 +331,12 @@ return [
             'icon' => 'fab fa-fw fa-buffer',
             'active' => ['admin/razas*'],
         ],
+        [
+            'text' => 'Tamaños',
+            'route'  => 'admin.tamaños.index',
+            'icon' => 'fab fa-fw fa-buffer',
+            'active' => ['admin/tamaños*'],
+        ],
         
         [
             'text'    => 'multilevel',

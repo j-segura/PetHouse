@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\GeneroController;
 use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\Admin\RazaController;
+use App\Http\Controllers\Admin\TamañoController;
 use App\Http\Controllers\AnimalController;
 use Illuminate\Support\Facades\Route;
 
@@ -13,3 +14,6 @@ Route::resource('generos', GeneroController::class)->names('admin.generos');
 
 /* Todas las rutas de las razas */
 Route::resource('razas', RazaController::class)->names('admin.razas');
+
+/* Todos las rutas de los tamaños */
+Route::resource('tamaños', TamañoController::class)->names('admin.tamaños');

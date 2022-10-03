@@ -17,14 +17,17 @@ class TamañoSeeder extends Seeder
     {
         $tamaño = new Tamaño();
         $tamaño->name = 'Pequeño';
+        $tamaño->slug = 'pequeño';
         $tamaño->save();
 
         $tamaño = new Tamaño();
         $tamaño->name = 'Mediano';
+        $tamaño->slug = 'mediano';
         $tamaño->save();
 
         $tamaño = new Tamaño();
         $tamaño->name = 'Grande';
+        $tamaño->slug = 'grande';
         $tamaño->save();
     }
 }

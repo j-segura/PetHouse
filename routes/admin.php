@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\CandidatoController;
 use App\Http\Controllers\Admin\GeneroController;
 use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\Admin\RazaController;
@@ -19,5 +20,8 @@ Route::resource('razas', RazaController::class)->names('admin.razas');
 /* Todos las rutas de los tamaños */
 Route::resource('tamaños', TamañoController::class)->names('admin.tamaños');
 
-/* Todas lar rutas de las categorias */
+/* Todas las rutas de las categorias */
 Route::resource('categorias', CategoriaController::class)->names('admin.categorias');
+
+/* Todas las rutas de los animales */
+Route::resource('candidatos', CandidatoController::class)->names('admin.candidatos');

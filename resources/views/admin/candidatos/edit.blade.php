@@ -3,7 +3,7 @@
 @section('title', 'Dashboard')
 
 @section('content_header')
-    <h1>Editar Categoria</h1>
+    <h1>Editar animal</h1>
 @stop
 
 @section('content')
@@ -16,19 +16,19 @@
     <div class="card">
         <div class="card-body">
             <div class="image_banner">
-                <strong class="form-label ">Banner actual:</strong>
-                <img src="/img/categoria_banners/{{ $categoria->banner }}" class="banner_admin_edit">
+                <strong class="form-label ">Foto actual:</strong>
+                <img src="/img/animals/{{ $candidato->foto }}" class="banner_admin_edit">
             </div>
 
-            {!! Form::model($categoria, [
-                'route' => ['admin.categorias.update', $categoria],
+            {!! Form::model($candidato, [
+                'route' => ['admin.candidatos.update', $candidato],
                 'method' => 'put',
                 'enctype' => 'multipart/form-data'
             ]) !!}
 
-            @include('admin.categorias.partials.form')
+            @include('admin.candidatos.partials.form')
 
-            {!! Form::submit('Actualizar categoria', ['class' => 'btn btn-primary']) !!}
+            {!! Form::submit('Actualizar animal', ['class' => 'btn btn-primary']) !!}
             {!! Form::close() !!}
         </div>
     </div>
@@ -50,7 +50,7 @@
 
 <style>
     .banner_admin_edit {
-        width: 70%;
+        width: 300px;
         height: 400px;
         object-fit: cover;
         margin-bottom: 15px;

@@ -3,7 +3,7 @@
 @section('title', 'Dashboard')
 
 @section('content_header')
-    <h1>Lista de categorias</h1>
+    <h1>Lista de animales</h1>
 @stop
 
 @section('content')
@@ -17,32 +17,36 @@
     <div class="card">
         <div class="card-body">
             <div class="card-header pl-0">
-                <a href="{{ route('admin.categorias.create') }}" class="btn btn-secondary">Agregar nueva categoria</a>
+                <a href="{{ route('admin.candidatos.create') }}" class="btn btn-secondary">Agregar nuevo animal</a>
             </div>
 
             <table class="table table-striped">
                 <thead>
                     <tr>
                         <th>ID</th>
-                        <th>Banner</th>
-                        <th>Name</th>
-                        <th colspan="2"></th>
+                        <th>Foto</th>
+                        <th>Nombre</th>
+                        <th colspan="3"></th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($categorias as $categoria)
+                    @foreach ($candidatos as $candidato)
                         <tr>
-                            <td>{{ $categoria->id }}</td>
-                            <td width="300px">
-                                <img src="/img/categoria_banners/{{ $categoria->banner }}" class="banner_admin">
+                            <td>{{ $candidato->id }}</td>
+                            <td>
+                                <img src="/img/animals/{{ $candidato->foto }}" class="candidato_foto">
                             </td>
-                            <td>{{ $categoria->name }}</td>
+                            <td>{{ $candidato->name }}</td>
                             <td width="10px">
-                                <a href="{{ route('admin.categorias.edit', $categoria) }}"
+                                <a href="{{ route('admin.candidatos.show', $candidato) }}"
+                                    class="btn btn-secondary btn-sm">Detalles</a>
+                            </td>
+                            <td width="10px">
+                                <a href="{{ route('admin.candidatos.edit', $candidato) }}"
                                     class="btn btn-primary btn-sm">Editar</a>
                             </td>
                             <td width="10px">
-                                <form action="{{ route('admin.categorias.destroy', $categoria) }}" method="POST">
+                                <form action="{{ route('admin.candidatos.destroy', $candidato) }}" method="POST">
                                     @csrf
                                     @method('delete')
                                     <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
@@ -57,9 +61,8 @@
 @stop
 
 <style>
-    .banner_admin {
-        width: 250px;
-        height: 150px;
+    .candidato_foto {
+        width: 150px;
+        height: 200px;
         object-fit: cover;
-    }
 </style>
